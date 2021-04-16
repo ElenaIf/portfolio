@@ -61,13 +61,14 @@
 
 header("Access-Control-Allow-Origin: *");
 
-$to = 'elena@ivankina.fi';
+$to = 'elena@ivankina.fi, test-ff0ebojxl@srv1.mail-tester.com';
 $subject = 'Message from Portfolio';
 $message = "The phone number of the sender is: " . $_POST['phone'] . " and the message is:  " . $_POST['message'];
 $headers = array(
     'From' => $_POST['senderName'],
     'Reply-To' => $_POST['email'],
-    'Cc' => $_POST['email'],
+	'X-Mailer' => 'PHP/' . phpversion()
+    
 );
 
 $send_status = mail($to, $subject, $message, $headers);
