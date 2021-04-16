@@ -65,7 +65,7 @@ $to = 'elena@ivankina.fi, test-ff0ebojxl@srv1.mail-tester.com';
 $subject = 'Message from Portfolio';
 $message = "The phone number of the sender is: " . $_POST['phone'] . " and the message is:  " . $_POST['message'];
 $headers = array(
-    'From' => $_POST['senderName'],
+    'From' => $_POST['email'],
     'Reply-To' => $_POST['email'],
 	'X-Mailer' => 'PHP/' . phpversion()
     
