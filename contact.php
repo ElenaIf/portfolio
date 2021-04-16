@@ -61,8 +61,8 @@
 
 header("Access-Control-Allow-Origin: *");
 
-$to = 'elena@ivankina.fi, test-ob7t7swoh@srv1.mail-tester.com';
-$subject = 'Message from Portfolio';
+$to = 'elena@ivankina.fi';
+$subject = 'Message from Portfolio from ' . $_POST['senderName'];
 $message = "The phone number of the sender is: " . $_POST['phone'] . " and the message is:  " . $_POST['message'];
 $headers = array(
     'From' => $_POST['email'],
